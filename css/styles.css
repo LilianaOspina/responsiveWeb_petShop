@@ -1,0 +1,333 @@
+:root{
+    /* Selection colors */
+    --c-1: #FFFFFF;
+    --c-2: #3C2313;
+    --c-3: #A0A0A0;
+    --c-4: #F0A83E;
+    --c-5: #000000;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+/* responsive sera mobile last ya que empezamos por el desktop */
+/* encabezado */
+.header__barra{
+    background-color: var(--c-5);
+    color: var(--c-1);
+    padding: 0.2rem 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+.header__barra h4{
+    font-weight: 300;
+}
+.header__barra div{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+select {
+    background-color: black;
+    color: var(--c-1);
+}
+.nav__navbar{
+    background-color: var(--c-4);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+.nav__navbar .burguer{
+    display: none;
+}
+.nav__navbar ul{
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 400px;
+}
+.nav__navbar ul.nav__items li{
+    color: var(--c-1);
+    list-style: none;
+    font-size: 1.6rem;
+}
+.nav__navbar ul.nav__items li img{
+    padding-right: 0.5rem;
+}
+
+/* Responsive: header */
+@media (max-width: 768px){
+    /* tablets */
+    .header__barra{
+        display: none;
+    }
+    .nav__navbar{
+        width: 100%;
+    }
+    .nav__navbar .logos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .nav__navbar .burguer {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        font-size: 3rem;
+        color: var(--c-1);
+    }
+    .nav__navbar .nav__items{
+        display: none;
+    }
+}
+/* home__intro: es un placer tenerte aqui */
+.home__intro{
+    background-image: url('../img/bowl_background.png');
+    background-size: cover;
+    height: 409px;
+    position: relative;
+}
+.home__intro div{
+    position: absolute;
+    top: 45%;
+    right: 2rem;
+    text-align: center;
+}
+.home__intro h3{
+    background-color: var(--c-1);
+    color: var(--c-5);
+    font-size: 3rem;
+    padding: 1rem 2.7rem;
+    border-radius: 0.4rem;
+    font-weight: 400;
+}
+.home__intro h4{
+    font-size: 1.6rem;
+    margin: 1.4rem 0.2rem;
+}
+.home__intro button{
+    background-color: var(--c-4);
+    color: var(--c-1);
+    font-size: 1.6rem;
+    padding: 1.5rem 2rem;
+    border-radius: 0.3rem;
+}
+/* responsive home intro */
+@media (max-width: 768px){
+    .home__intro div{
+        text-align: right;
+    }
+    .home__intro h3{
+        font-size: 1.7rem;
+    }
+    .home__intro button{
+        font-size: 1.3rem;
+    }
+}
+/* productos desctacados */
+.home__featured{
+    padding-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+}
+.home__featured .featured__title .logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home__featured .featured__title h1{
+    color: var(--c-2);
+    font-weight: bold;
+    font-size: 4rem;
+}
+.home__featured .featured__title div{
+    padding: 2rem;
+}
+.home__featured .featured__title a{
+    text-decoration: none;
+    color: var(--c-3);
+}
+.home__featured .featured__content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+.home__featured .featured__content div{
+    background-color: var(--c-1);
+    padding: 0.5rem;
+}
+.home__featured .featured__content p{
+    color: var(--c-4);
+    font-weight: 700;
+}
+/* Contactanos */
+.home__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home__contact h2{
+    padding-top: 5rem;
+    font-size: 2.5rem;
+    color: var(--c-2);
+}
+.home__contact form {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.home__contact input {
+    padding: 1rem;
+    width: 30rem;
+    background-color: var(--c-2);
+    margin: 0.4rem;
+    color: var(--c-1);
+    border-radius: 15px;
+}
+.home__contact button {
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.home__contact button[type=reset]{
+    background-color: var(--c-3);
+    color: var(--c-1);
+}
+.home__contact button[type=submit]{
+    background-color: var(--c-4);
+    color: var(--c-1);
+    padding: 1rem 4rem;
+}
+/* Footer suscripcion */
+footer{
+    position: relative;
+}
+.home__news{
+    background-color: var(--c-4);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.home__news div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.home__news .news__titlebox{
+    width: 35%;
+    min-width: 300px;
+    max-width: 300px;
+    color: var(--c-1);
+    font-size: 1.3rem;
+}
+.home__news img{
+    width: 4rem;
+}
+.home__news .news__form{
+    width: 40%;
+    min-width: 300px;
+    max-width: 300px;
+}
+.home__news .news__form input{
+    padding: 1rem 9rem 1rem 0.2rem;
+    border-radius: 0.9rem;
+    margin-right: 0.5rem;
+}
+.home__news .news__form input::placeholder{
+    font-size: 1.1rem;
+}
+.home__news .news__form button{
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: var(--c-2);
+    color: var(--c-1);
+    font-size: 1rem;
+}
+@media (max-width: 768px){
+    .home__news{
+        justify-content: center;
+    }
+}
+/* footer redes empresa */
+.home__findus{
+    background-color: var(--c-2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem;
+}
+.home__findus ul{
+    width: 50%;
+}
+.home__findus ul li{
+    display: flex;
+    width: 100%;
+    height: 7.5rem;
+    color: var(--c-1);
+    align-items: center;
+}
+.home__findus ul li img{
+    width: 7rem;
+    padding-right: 1.5rem;
+}
+.home__findus ul li div h3{
+    font-size: 2rem;
+    color: var(--c-1);
+}
+.home__findus ul li div p{
+    font-size: 1rem;
+    color: var(--c-3);
+}
+.home__findus div img{
+    font-size: 2rem;
+    height: 3rem;
+}
+/* responsive: find us */
+@media (max-width: 768px){
+    .home__findus{
+        flex-direction: column;
+    }
+    .home__findus ul{
+        order: 2;
+    }
+    .home__findus div{
+        order: 1;
+    }
+}
+footer .derechos{
+    background-color: var(--c-5);
+    color: var(--c-1);
+    text-align: center;
+
+}
+footer .go__home a img{
+    width: 5rem;
+    color: var(--c-4);
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
